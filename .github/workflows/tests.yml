@@ -24,8 +24,6 @@ jobs:
 
       - run: npm ci
 
-      - run: npm install chromedriver@81.0.0
-
       - run: npm test
         env: 
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
