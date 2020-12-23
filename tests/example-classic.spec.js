@@ -102,7 +102,7 @@ describe('ACME Demo App - wdio6', function () {
   });
   
   after(async () => {
-    const results = await runner.getAllTestResults(false);
+    const results = await runner.getAllTestResults();
     console.log(results);
   });
   
