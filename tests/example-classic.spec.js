@@ -69,7 +69,7 @@ describe('ACME Demo App - wdio6', function () {
   it('classicTest', async () => {
     // Navigate to the url we want to test
 
-    await browser.url('https://demo.applitools.com');
+    await browser.url('https://demo.applitools.com/index_v2.html');
 
     await expect(browser).toHaveTitle('ACME demo app');
 
