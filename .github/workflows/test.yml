@@ -1,0 +1,32 @@
+name: Run all tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env: 
+  APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Clean install the project
+        run: npm ci
+
+      - name: Install ChromeDriver
+        run: npm install chromedriver --detect_chromedriver_version
+
+      - name: Execute all tests
+        run: npm run test:ci
