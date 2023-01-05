@@ -1,5 +1,5 @@
 {
-  "name": "tutorial-webdriverio-basic",
+  "name": "example-webdriverio6-javascript-classic",
   "version": "2.0.0",
   "description": "Applitools Example: WebdriverIO 6 JavaScript with the Classic Runner",
   "main": "index.js",
